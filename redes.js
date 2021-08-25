@@ -84,7 +84,8 @@ let gerenciaRedessociais = () => {
                 })
             }
         }
-        console.log(vetorUsuarioPosts)
+        console.log(vetorUsuarioPosts) 
+        
     }
     // Usuario informa a rede social e o programa retorna qts posts foram feitos
     // o programa retorna quanto posts foram feitos em todas as redes cosiais
