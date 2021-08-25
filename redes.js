@@ -55,7 +55,36 @@ let gerenciaRedessociais = () => {
             }
             console.log(`A qtd de posts de uma rede social  ${vetorRede[i].codigo} é ${conta}`)
         }
-
+        let login = prompt(`Informe o login`)
+        for(let i=0;i<5;i++)
+        {
+            if(login == vetorUser[i].login){
+                somaPosts = somaPosts + vetorUser[i].QtdePosts
+                achou = true 
+            }
+        }
+        if (achou){
+            alert(`O usuario com login ${login}, reaqlizou ${somaPosts}`)
+        }
+        else {
+            alert(`Usuário nao encontrado`)
+        }
+        let vetorUsuarioPosts
+        for (let i=0;i<5;i++){ // cada usuario do vetor
+            for(let j=0;j<vetorUsuarioPosts; j++){
+                if (vetorUser[i].login == vetorUsuarioPosts[i].login){
+                    vetorUsuarioPosts[j].qtde = vetorUsuarioPosts[j].qtde + vetorUser[i].QtdePosts
+                achou = true
+                }
+            }
+            if (!achou) {
+                vetorUsuarioPosts.push({
+                    login.vetorUser[i].login,
+                    qtde: vetorUser[i].QtdePosts
+                })
+            }
+        }
+        console.log(vetorUsuarioPosts)
     }
     // Usuario informa a rede social e o programa retorna qts posts foram feitos
     // o programa retorna quanto posts foram feitos em todas as redes cosiais
